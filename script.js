@@ -3,7 +3,7 @@ const canvas = document.getElementById("canvas1");
 const c = canvas.getContext("2d");  
 const CANVAS_WIDTH = canvas.width = 500; 
 const CANVAS_HEIGHT = canvas.height = 1000; 
-const numberOfEnemies = 100; 
+const numberOfEnemies = 50; 
 const enemiesArray = []
 
 let gameFrame = 0; 
@@ -25,7 +25,7 @@ class Enemy {
     update() {
     
         this.x += Math.random() * 5 - 2.5; 
-        this.y += Math.random() * 3 - 2.5;
+        this.y += Math.random() * 3 - 1.5;
         // animate sprites
         //if:only run code every two loops ; this slows down the animation
         if (gameFrame % this.flapSpeed === 0){
